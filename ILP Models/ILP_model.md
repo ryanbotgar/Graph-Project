@@ -116,16 +116,18 @@ If $i$ is the last customer, $f_i$ is at least the return time and at most $T$ (
 
 $$
 \begin{aligned}
-\min\ & \sum_{i\in C} f_i && (O)\\
-\text{s.t.}\ & \textstyle\sum_{i\in N\setminus\{j\}}x_{ij}=1,\quad \sum_{h\in N^{+}\setminus\{j\}}x_{jh}=1 && \forall j\in C \quad (C1,C2)\\
-& \textstyle\sum_{j\in C}x_{0j}\le k && (C3)\\
-& L_j\ge L_i+q_j-Q(1-x_{ij}) && \forall i,j\in C,\ i\ne j \quad (C4)\\
-& \textstyle\sum_{s}z^{s}_{i}=1,\quad \sum_{s}\beta_{s-1}z^{s}_{i}\le t_i\le\sum_{s}(\beta_s-\varepsilon)z^{s}_{i} && \forall i\in C \quad (C5)\\
-& t_i\ge u_i+s_i && \forall i\in C \quad (C6)\\
-& r_j\ge\tau^{1}_{0j}x_{0j} && \forall j\in C \quad (C7)\\
-& r_j\ge t_i+\textstyle\sum_{s}\tau^{s}_{ij}z^{s}_{i}-M_{ij}(1-x_{ij}) && \forall i,j\in C,\ i\ne j \quad (C8)\\
-& u_i\ge r_i,\quad a_i\le u_i\le b_i && \forall i\in C \quad (C9)\\
-& f_i\ge t_i+\textstyle\sum_{s}\tau^{s}_{i0}z^{s}_{i}-M_i(1-x_{i,n+1}),\quad f_i\le T\,x_{i,n+1} && \forall i\in C \quad (C10)\\
+(O)\quad & \min\ \textstyle\sum_{i\in C} f_i\\
+(C1)\quad & \textstyle\sum_{i\in N\setminus\{j\}}x_{ij}=1 \quad \forall j\in C\\
+(C2)\quad & \textstyle\sum_{h\in N^{+}\setminus\{j\}}x_{jh}=1 \quad \forall j\in C\\
+(C3)\quad & \textstyle\sum_{j\in C}x_{0j}\le k\\
+(C4)\quad & L_j\ge L_i+q_j-Q(1-x_{ij}) \quad \forall i,j\in C,\ i\ne j\\
+(C5a)\quad & \textstyle\sum_{s}z^{s}_{i}=1 \quad \forall i\in C\\
+(C5b)\quad & \textstyle\sum_{s}\beta_{s-1}z^{s}_{i}\le t_i\le\sum_{s}(\beta_s-\varepsilon)z^{s}_{i} \quad \forall i\in C\\
+(C6)\quad & t_i\ge u_i+s_i \quad \forall i\in C\\
+(C7)\quad & r_j\ge\tau^{1}_{0j}x_{0j} \quad \forall j\in C\\
+(C8)\quad & r_j\ge t_i+\textstyle\sum_{s}\tau^{s}_{ij}z^{s}_{i}-M_{ij}(1-x_{ij}) \quad \forall i,j\in C,\ i\ne j\\
+(C9)\quad & u_i\ge r_i,\ \ a_i\le u_i\le b_i \quad \forall i\in C\\
+(C10)\quad & f_i\ge t_i+\textstyle\sum_{s}\tau^{s}_{i0}z^{s}_{i}-M_i(1-x_{i,n+1}),\ \ f_i\le T\,x_{i,n+1} \quad \forall i\in C\\
 & x_{ij}\in\{0,1\},\ z^{s}_{i}\in\{0,1\},\ r_i\ge0,\ t_i\in[0,T),\ q_i\le L_i\le Q,\ f_i\ge0
 \end{aligned}
 $$
